@@ -21,10 +21,14 @@
                         <label class="texto__parrafo">Cantidad
                             <input class="container__input" type="number" id="cantidad" >
                         </label>
-                        <button onclick="generar()" class="boton" id="generar" >Generar</button>
+                        <button onclick="generar(), setTimeout(validar_contraseña, 100)" class="boton" id="generar" >Generar</button>
                     </div> 
                     <div class="container__campo">
                         <input class="container__contrasena" type="text" id="contrasena" placeholder="contraseña">
+                    </div>
+                    <div class="container__campo">
+                        <button onclick="limpiar()" class="boton" id="limpiar">Limpiar</button>
+                        <button onclick="copiar()" class="boton" id="copiar">Copiar</button>
                     </div>
                 </div> 
             </div>

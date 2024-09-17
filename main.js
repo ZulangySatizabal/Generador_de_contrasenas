@@ -27,4 +27,39 @@ function generar() {
   }
 }
 
-generar();
+function limpiar(){
+    cantidad_caracteres.value = ""
+    contraseña.value = ""
+}
+
+function copiar() {
+    // Copiar el texto utilizando la API moderna
+    navigator.clipboard.writeText(contraseña.value).then(() => {
+        // Mostrar mensaje de confirmación
+        alert("Contraseña copiada al portapapeles");
+    }).catch(err => {
+        // Si ocurre un error, lo mostramos
+        console.error("Error al copiar la contraseña: ", err);
+    });
+}
+
+function validar_contraseña(){
+    // Expresiones regulares para validar diferentes aspectos
+    const tieneNumero = /\d/;                // Verifica si tiene al menos un número
+    const tieneMayuscula = /[A-Z]/;          // Verifica si tiene al menos una letra mayúscula
+    const tieneMinuscula = /[a-z]/;          // Verifica si tiene al menos una letra minúscula
+    const tieneLongitud = contraseña.value.length >= 8;  // Verifica que la longitud sea al menos 8 caracteres
+
+    // Validación de la fortaleza de la contraseña
+    if (!tieneNumero.test(contraseña.value)) {
+        alert("La contraseña es débil: debe contener al menos un número.");
+    } else if (!tieneMayuscula.test(contraseña.value)) {
+        alert("La contraseña es débil: debe contener al menos una letra mayúscula.");
+    } else if (!tieneMinuscula.test(contraseña.value)) {
+        alert("La contraseña es débil: debe contener al menos una letra minúscula.");
+    } else if (!tieneLongitud) {
+        alert("La contraseña es débil: debe tener al menos 8 caracteres.");
+    } else {
+        alert("La contraseña es fuerte.");
+    }
+}
