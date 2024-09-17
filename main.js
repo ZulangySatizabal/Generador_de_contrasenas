@@ -5,7 +5,7 @@ let btn_generar = document.getElementById("generar");
 let contraseña = document.getElementById("contrasena");
 
 const cadena_caracteres =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()";
 
 function generar() {
   let campo_caracter = parseInt(cantidad_caracteres.value);
