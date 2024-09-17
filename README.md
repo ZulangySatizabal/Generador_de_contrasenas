@@ -20,9 +20,10 @@ Cadena de caracteres utilizada en el aula para construir la contraseña: **'ABCD
 ### Extra
 
 - [x]  Agregar un botón para copiar la contraseña y guardarla en el portapeles.
-## Authors
 
-All check ✓
+**All check ✓**
+
+## Authors
 
 - [@ZulangySatizabal](https://github.com/ZulangySatizabal) 👋
 
